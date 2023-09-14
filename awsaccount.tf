@@ -22,9 +22,4 @@ resource "aws_organizations_organizational_unit" "ou" {
   parent_id = var.parent_id
 }
 
-resource "aws_organizations_account_association" "account_association" {
-  account_id = aws_organizations_account.account.id
-  organizational_unit_id = aws_organizations_organizational_unit.ou.id
-}
-
 

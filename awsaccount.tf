@@ -14,7 +14,6 @@ provider "aws" {
 resource "aws_organizations_account" "account" {
   email = var.root_email
   name = var.account_name
-  tags = var.tags
 }
 
 

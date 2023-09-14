@@ -5,25 +5,26 @@ terraform {
       version = "~>5.0"
     }
   }
-
-  provider "aws" {
-    region = "us-east-1"
-  }
-
-  resource "aws_organizations_account" "account" {
-    email = var.root_email
-    name = var.account_name
-    tags = var.tags
-  }
-
-  resource "aws_organizations_organizational_unit" "ou" {
-    name = var.ou_name
-    parent_id = var.parent_id
-  }
-
-  resource "aws_organizations_account_association" "account_association" {
-    account_id = aws_organizations_account.account.id
-    organizational_unit_id = aws_organizations_organizational_unit.ou.id
-  }
 }
+
+provider "aws" {
+  region = "us-east-1"
+}
+
+resource "aws_organizations_account" "account" {
+  email = var.root_email
+  name = var.account_name
+  tags = var.tags
+}
+
+resource "aws_organizations_organizational_unit" "ou" {
+  name = var.ou_name
+  parent_id = var.parent_id
+}
+
+resource "aws_organizations_account_association" "account_association" {
+  account_id = aws_organizations_account.account.id
+  organizational_unit_id = aws_organizations_organizational_unit.ou.id
+}
+
 

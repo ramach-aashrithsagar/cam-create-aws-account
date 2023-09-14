@@ -3,7 +3,7 @@ terraform {
     aws = "~> 3.79.0"
   }
 
-  provider aws {
+  provider "aws" {
     region = var.region
   }
 

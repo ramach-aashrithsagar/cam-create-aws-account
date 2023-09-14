@@ -17,9 +17,4 @@ resource "aws_organizations_account" "account" {
   tags = var.tags
 }
 
-resource "aws_organizations_organizational_unit" "ou" {
-  name = var.ou_name
-  parent_id = var.parent_id
-}
-
 

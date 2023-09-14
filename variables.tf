@@ -20,13 +20,5 @@ variable tags{
   description = "(Required) Tags for the resource"
 }
 
-variable "ou_name" {
-  type = string
-  description = "(Required) Org Unit Name"
-}
 
-variable "parent_id" {
-  type = string
-  description = "(Required) Organization Unit Parent Id"
-}
 

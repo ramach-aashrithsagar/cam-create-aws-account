@@ -23,5 +23,6 @@ variable tags{
 variable "org_unit_id" {
   type = string
   description = "Organization Unit"
+  optional = true
 }
 

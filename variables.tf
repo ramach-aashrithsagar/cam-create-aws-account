@@ -20,9 +20,4 @@ variable tags{
   description = "(Required) Tags for the resource"
 }
 
-variable "org_unit_id" {
-  type = string
-  description = "Organization Unit"
-  optional = true
-}
 

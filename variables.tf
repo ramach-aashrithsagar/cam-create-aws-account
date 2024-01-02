@@ -20,4 +20,15 @@ variable tags{
   description = "(Required) Tags for the resource"
 }
 
+variable "close_delete" {
+  type = bool
+  description = "Close Account on deletion"
+  default = true
+}
+
+variable "gov_cloud" {
+  type = bool
+  description = "Gov Cloud Account"
+  default = false
+}
 

@@ -20,15 +20,25 @@ variable tags{
   description = "(Required) Tags for the resource"
 }
 
-variable "close_delete" {
-  type = bool
-  description = "Close Account on deletion"
-  default = true
+variable monthly_budget {
+  type = number
+  default = 0
 }
 
-variable "gov_cloud" {
+variable is_suspended {
   type = bool
-  description = "Gov Cloud Account"
   default = false
 }
 
+variable notification_email {
+  type = string
+  description = "Additional email where Budget Notifications are to be sent"
+}
+
+variable "parent_id" {
+  type = string
+  description = "(Required) Account Parent Organizational Unit"
+}
+
+variable AWS_ACCESS_KEY_ID {}
+variable AWS_SECRET_ACCESS_KEY {}
